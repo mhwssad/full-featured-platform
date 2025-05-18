@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cybz_back.mapper.ImageMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.cybz_back.entity.mysql.image.Image">
+        <id property="imageId" column="image_id" jdbcType="BIGINT"/>
+        <result property="originalMd5" column="original_md5" jdbcType="CHAR"/>
+        <result property="originalSha256" column="original_sha256" jdbcType="CHAR"/>
+        <result property="originalFormat" column="original_format" jdbcType="VARCHAR"/>
+        <result property="originalSize" column="original_size" jdbcType="BIGINT"/>
+        <result property="convertedMd5" column="converted_md5" jdbcType="CHAR"/>
+        <result property="convertedSha256" column="converted_sha256" jdbcType="CHAR"/>
+        <result property="convertedSize" column="converted_size" jdbcType="BIGINT"/>
+        <result property="storagePath" column="storage_path" jdbcType="VARCHAR"/>
+        <result property="originalMetadata" column="original_metadata" jdbcType="OTHER"/>
+        <result property="uploaderId" column="uploader_id" jdbcType="BIGINT"/>
+        <result property="uploadTime" column="upload_time" jdbcType="TIMESTAMP"/>
+        <result property="referenceCount" column="reference_count" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        image_id,original_md5,original_sha256,
+        original_format,original_size,converted_md5,
+        converted_sha256,converted_size,storage_path,
+        original_metadata,uploader_id,upload_time,
+        reference_count,status
+    </sql>
+</mapper>
