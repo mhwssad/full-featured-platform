@@ -1,0 +1,14 @@
+package com.example.cybz_back.service.mysql.auth;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.cybz_back.entity.mysql.auth.UserRole;
+
+/**
+ * @author liujian
+ * @description 针对表【user_role】的数据库操作Service
+ * @createDate 2025-05-10 13:02:35
+ */
+public interface UserRoleService extends IService<UserRole> {
+    UserRole getRoleIdByUserId(Long userId);
+
+}
