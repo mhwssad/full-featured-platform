@@ -1,0 +1,6 @@
+spring.application.name=cybz_back
+server.port=9000
+
+# 启用优雅关机（Graceful Shutdown）
+server.shutdown=graceful
+spring.lifecycle.timeout-per-shutdown-phase=30s
