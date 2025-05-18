@@ -43,6 +43,21 @@ public class UserLoginController {
         return userService.captcha(loginDto.getUsername(), loginDto.getCaptcha(), ipAddress);
     }
 
+    @Operation(summary = "密码登录接口")
+    @Parameters(
+            value = {
+                    @io.swagger.v3.oas.annotations.Parameter(
+                            name = "username",
+                            description = "用户名",
+                            required = true
+                    ),
+                    @io.swagger.v3.oas.annotations.Parameter(
+                            name = "password",
+                            description = "密码",
+                            required = true
+                    )
+            }
+    )
     @PostMapping("/login")
     public JSONResult<?> login(@RequestBody @Validated(LoginDto.EnablePassword.class) LoginDto loginDto,
                                HttpServletRequest request) {
