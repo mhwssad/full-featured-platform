@@ -161,6 +161,7 @@ BEGIN
         SET NEW.active_flag = NULL;
     END IF;
 END$$
+
 CREATE TRIGGER set_active_flag_before_update
     BEFORE UPDATE
     ON `user_token`

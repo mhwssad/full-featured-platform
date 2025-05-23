@@ -187,9 +187,9 @@ default:
       maxSize: 1000
   file:
     image:
-      avatar: /static/images/avatar
-      background: /static/images/background
-      test: /static/images/test
+      avatar: E:\myproject\git\full-featured-platform\public\images\avatar
+      background: E:\myproject\git\full-featured-platform\public\images\background
+      test: E:\myproject\git\full-featured-platform\public\images\test
       processing:
         quality: 0.7
 
